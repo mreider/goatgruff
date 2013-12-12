@@ -1,1 +1,19 @@
-<h1>hi there</h1>
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="{% static "goat/jquery.terminal-0.7.10.min.js" %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static "goat/jquery.terminal.css" %}">
+  </head>
+<body>
+    <div id="term"></div>
+<script>
+jQuery(function($) {
+    $('#term').terminal("http://goatgruff.com/json/", {
+        greetings: "Menu: (R)egister (L)ogin"});
+});
+
+</script>
+</body>
+</html>
